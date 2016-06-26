@@ -1,0 +1,24 @@
+<div class="yelpResult" ng-repeat="result in thirdCtrl.YelpResults">
+	
+	<div ym-results ng-click="yelpResultsCtrl.result(result.coordinates)">
+		
+		<div class="yelpTxt">
+			<div class="resultName">{{$index + 1}}. <span ng-bind="result.name"></span>
+				<i class="material-icons md-18">directions</i>
+			</div>
+			<div ng-show="result.phone">Phone:
+				<span class="yelpText" ng-bind="result.phone"></span>
+			</div>	
+			<div class="resultAddress" ng-bind="result.address"></div>
+			<div><a class="resultUrl" target="_blank" ng-href="{{result.url}}">Yelp Review</a></div>
+		</div>
+		<img class="yelpImg" ng-src="{{result.image}}">
+	
+		<div style="color:black; padding:5px;" ng-show="yelpResultsCtrl.clicked">
+			
+		<div ym-Directions ng-animate='animate'></div>	
+		
+		</div>
+	
+	</div>
+</div>

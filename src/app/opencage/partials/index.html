@@ -1,0 +1,44 @@
+
+<div id="top" class="mainPageHeader">     
+        <div class="text-vertical-center">
+            <form class="form" name="secondCtrl.myForm" ng-submit="secondCtrl.onSubmit(secondCtrl.fromAddress, secondCtrl.toAddress, secondCtrl.yelpSearch, secondCtrl.generateYelpMapState)" novalidate>
+            
+                <br>
+                <h1>
+                    <input type="text" ng-model="secondCtrl.yelpSearch" name ="yelpSearch" class="yelpSearch" placeholder="Find:">
+                </h1>
+                
+                <br>
+                
+                <h2>
+                    <input class="destination" type="text" ng-model="secondCtrl.fromAddress" name="fromAddress" placeholder="Location A" required>
+
+                        <i class="material-icons">keyboard_arrow_right</i>
+                    
+                    <input class="destination"  type="text" ng-model="secondCtrl.toAddress" name="toAddress" placeholder="Location B" required>
+                </h2>
+                <br>
+                <div>
+                    <input ng-hide="secondCtrl.submitButton" class="submitButton" type="submit" value="Locate"> 
+                </div>
+                
+                 <span class="comment" ng-show="secondCtrl.formComment"><br><br>You must have all fields completed to locate.</span>
+                <!-- <div ng-show="secondCtrl.loading" class="three-quarters-loader">Loading…
+                </div> -->
+                <div ng-show="secondCtrl.loading" class="spinner">
+                  <div class="bounce1"></div>
+                  <div class="bounce2"></div>
+                  <div class="bounce3"></div>
+                </div>
+
+                <br><br>
+
+            </form><br>
+        </div>
+</div>
+
+<!-- <div>
+	<pre>
+			{{secondCtrl.myForm | json}}
+	</pre>
+</div> -->

@@ -1,0 +1,14 @@
+<div ng-show="yelpResultsCtrl.direction">
+	
+	<br><br><br><br><br><br>
+
+		<div class="animate">
+
+			Direction from A to <span ng-bind="result.name"></span>:
+				<br><br>
+				<div class="directions" ng-bind-html="yelpResultsCtrl.direction"></div>
+
+		<!--<b>Direction from <span ng-bind="result.name"></span> to B:</b>
+				<div style="padding:5px;" ng-bind-html-unsafe="{{yelpResultsCtrl.direction}}"></div>-->
+		</div>
+</div>

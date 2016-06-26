@@ -1,0 +1,288 @@
+/*Yelp Directive CSS*/
+
+.animate.ng-enter { 
+   opacity:0.0;
+   transition: 1s ease-in all;
+}
+
+.animate.ng-enter-active {
+  opacity: 1;
+}
+
+.animate{
+  border:1px solid rgba(0,0,0,0.4);
+  padding: 10px;
+  width: 96%;
+/*  background-color:#fff;*/
+}
+
+.direction {
+  font-weight: bold;
+}
+
+.directions {
+  padding: 0 10px 5px 5px;
+}
+/*HereMap Page CSS*/
+
+.resultAddress{
+  font-size: 14px;
+}
+
+.resultUrl{
+  color:#124191;
+}
+.resultUrl:hover {
+  color:#ddd;
+}
+
+.resultName{
+  font-size: 18px;
+  color: white;
+/*  font-weight: bold;*/
+}
+
+.headerTop{
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.40);
+    -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
+    height: 100px;
+    background-color: #124191;
+}
+.yelpImg{
+  float:right;
+}
+
+.yelpTxt{
+   margin:10px;
+   width:70%;
+   float: left;
+}
+
+.yelpResult{
+  float:left;
+  width:100%;
+  padding-bottom: 5px;
+/*  border-bottom:1px solid #fff;*/
+/*  border-bottom:3px solid #fff;*/
+/*  color: white;
+  background-color:#bf0000;*/
+}
+
+.yelpSide{
+    width: 38%;
+    text-align: left;
+    padding-left: 15px;
+/*    margin: 2px 5px;*/
+    height: 550px;
+    overflow-y: scroll;
+
+  }
+
+.mapSide{
+  float: right;
+  text-align: left;
+  /*margin: 2px 5px;*/
+  top:-549px;
+  /*padding-right:25px;*/
+  position: relative;
+  border-left: 1px solid rgba(0,0,0,0.4);
+/*  display: inline*/
+
+}
+
+.goBackHome{
+  font-size:24px;
+  text-decoration: none;
+  color: #124191;
+}
+
+/*Opencage Page CSS*/
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #1abc9c;
+}
+
+body {
+    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin: 0;
+}
+
+.mainPageHeader {
+   /* display: table;*/
+   /* position: relative;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    background-color: #1abc9c;
+    padding-top:15%;
+   /* background: url('../../../assets/img_bootstrap/bg.jpg') no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;*/
+}
+
+.text-vertical-center {
+    /*display: table-cell;*/
+    text-align: center;
+    vertical-align: middle;
+}
+
+.form{
+  /* background: #fff;*/
+}
+
+.comment{
+    color: #000;
+   /* font-weight: bold;*/
+}
+.yelpSearch{
+    width:600px;
+   /* height:60px; */
+    color:#000;
+    font-size: 50px;
+    border: none;
+    padding: 5px;
+    background-color: transparent;
+    border-bottom: solid 2px #fff;
+    transition: border 0.3s;
+}
+
+.yelpSearch:focus, .destination:focus,
+.yelpSearch.focus, .destination.focus {
+  border-bottom: solid 2px #124191;
+  outline:none;
+}
+
+.yelpSearch:-webkit-autofill, .destination:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #1abc9c inset;
+}
+
+.destination {    
+    width:280px;
+    /*height: 30px;*/
+    color: #000;
+    font-size: 18px; 
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    border-bottom: solid 2px #fff;
+    transition: border 0.3s;
+  }
+
+.submitButton{
+  height: 50px;
+  width: 100px;
+  border: none;
+  font-size: 18px;
+  background-color: #124191;
+  color: #fff;
+  outline:none;
+}
+
+.submitButton:hover{
+  background-color: #fff;
+  color: #124191;
+  border: 2px solid #124191;
+  font-weight: bold;
+  outline:none;
+}
+
+.material-icons{
+  color: #124191;
+  vertical-align: middle;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+/*  color: #124191;*/
+    color:white;
+}
+
+.material-icons.md-18 {
+  font-size: 18px;
+  color: #124191;
+}
+
+.material-icons.md-18:hover, .material-icons.md-48:hover {
+  color: #ddd;
+}
+
+::-webkit-input-placeholder {
+   color: #fff;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #fff;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #fff;
+}
+
+:-ms-input-placeholder {  
+   color: #fff; 
+}
+
+/*MainCtrl Page CSS*/
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.thumbnail {
+  height: 200px;
+}  
+
+.thumbnail img.pull-right {
+    width: 50px;
+}
+
+/*Spinner Code*/
+.spinner {
+  margin: 25px auto 0;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
