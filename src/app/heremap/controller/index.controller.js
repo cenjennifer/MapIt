@@ -11,20 +11,21 @@
 			self.fromAddress = CompileAddress.getFromAddress();
 			self.toAddress = CompileAddress.getToAddress();
 			self.yelpSearch = CompileYelpSearch.getYelpSearch();
+			 
 
 			self.gettingCoordinates = CompileCoordinates.getCoordinates();
-			console.log(self.gettingCoordinates);
+			 
 
 			self.collectDataState = UI_ROUTES.kCollectDataState.stateName;
 			self.generateMapState = UI_ROUTES.kGenerateMapState.stateName;
 
+			var mapheight = window.innerHeight || document.body.clientHeight;
 
 			var width = window.innerWidth || document.body.clientWidth;
-			var mapWidth = Math.ceil(width*.59);
-			console.log(width);
-			console.log(mapWidth);
+			var mapWidth = Math.ceil(width*.65);
+
 			self.addingAllYelpMarkers = '';
-			var yelpImgUrl = 'http://image.maps.cit.api.here.com/mia/1.6/routing?app_id=YjJfIGTAZK18idodKLPM&app_code=HXyYKRKy3xKANpvW1gTFeQ&waypoint0=' + self.gettingCoordinates[0] + '&waypoint1=' + self.gettingCoordinates[1] + '&lc=1652B4&lw=6&t=13&ppi=320&f=2&w=' + mapWidth + '&h=550&poix0=' + self.gettingCoordinates[0] + ';00a3f2;white;18;A.&poix1=' + self.gettingCoordinates[1] + ';00a3f2;white;18;B.';
+			var yelpImgUrl = 'http://image.maps.cit.api.here.com/mia/1.6/routing?app_id=YjJfIGTAZK18idodKLPM&app_code=HXyYKRKy3xKANpvW1gTFeQ&waypoint0=' + self.gettingCoordinates[0] + '&waypoint1=' + self.gettingCoordinates[1] + '&lc=1652B4&lw=6&t=13&ppi=320&f=2&w=' + mapWidth + '&h=' + mapheight + '&poix0=' + self.gettingCoordinates[0] + ';00a3f2;white;18;A.&poix1=' + self.gettingCoordinates[1] + ';00a3f2;white;18;B.';
 
 			self.refresh = function () {
 				self.YelpResults.length = 0;
@@ -53,6 +54,7 @@
 					self.yelpResults = CompileYelpResults.compileYelp(self.MapRouteArray, self.yelpSearch, function (result) {
 						$timeout(function () {
 							self.parsedResults = result;
+
 							ParsingYelpResults.parsingData(result, function (parsedResult) {
 								$timeout(function () {
 

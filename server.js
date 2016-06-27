@@ -2,9 +2,9 @@
 
 var express = require('express');
 
+// For MongoDB if db is implemented.
 var config = require('./server/config/config');
 var mongoose = require('mongoose');
-
 var db = mongoose.connect(config.db.uri, config.db.options, function(err) {
   if (err) {
     console.error('Could not connect to MongoDB!');

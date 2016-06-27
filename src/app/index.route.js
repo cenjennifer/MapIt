@@ -6,7 +6,7 @@
     .config(routerConfig);
 
   /** @ngInject */
-  function routerConfig($stateProvider, $urlRouterProvider, UI_ROUTES) {
+  function routerConfig($stateProvider, $urlRouterProvider, UI_ROUTES, $locationProvider) {
     $stateProvider
       .state('home', {
         url: '/',
@@ -39,6 +39,7 @@
       });
 
     $urlRouterProvider.otherwise('/opencage');
+    // $locationProvider.html5Mode(true);
   }
 
 })();

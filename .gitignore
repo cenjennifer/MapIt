@@ -1,2 +1,4 @@
 node_modules
 bower_components
+AuthClient.js
+./src/app/authClient.js
